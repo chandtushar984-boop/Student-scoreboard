@@ -1,5 +1,5 @@
 .form-card {
-  background: #ffffff;
+  background: #f9a9a9;
   border: 1px solid #e2e8f0;
   border-radius: 12px;
   padding: 1.25rem 1.5rem;
@@ -77,8 +77,6 @@
   color: #b91c1c;
   margin-top: 8px;
 }
-
-/* Responsive */
 @media (max-width: 560px) {
   .form-row {
     grid-template-columns: 1fr 1fr;

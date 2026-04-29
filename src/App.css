@@ -1,11 +1,9 @@
-/* ── Layout ── */
 .app-wrapper {
   max-width: 860px;
   margin: 0 auto;
   padding: 2rem 1.25rem 3rem;
 }
 
-/* ── Stats Grid ── */
 .stats-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));

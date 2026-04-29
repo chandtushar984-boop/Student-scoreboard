@@ -19,8 +19,6 @@
   font-weight: 500;
   color: #1e293b;
 }
-
-/* Score input + update button */
 .score-cell {
   display: flex;
   align-items: center;
@@ -62,8 +60,6 @@
   border-color: #1d9e75;
   color: #0f6e56;
 }
-
-/* Displayed score value */
 .score-display {
   font-size: 15px;
   font-weight: 600;
@@ -71,8 +67,6 @@
 
 .score-pass { color: #0f6e56; }
 .score-fail { color: #b91c1c; }
-
-/* Pass / Fail badge */
 .status-badge {
   display: inline-block;
   font-size: 12px;

@@ -7,21 +7,18 @@ function AddStudentForm({ onAdd }) {
   const [error, setError] = useState('')
 
   const handleSubmit = () => {
-    /* Validate name */
     const trimmedName = name.trim()
     if (!trimmedName) {
       setError('Please enter a student name.')
       return
     }
 
-    /* Validate score */
+   
     const parsedScore = parseInt(score, 10)
     if (isNaN(parsedScore) || parsedScore < 0 || parsedScore > 100) {
       setError('Score must be a whole number between 0 and 100.')
       return
     }
-
-    /* All good — pass up and clear form */
     onAdd(trimmedName, parsedScore)
     setName('')
     setScore('')
@@ -55,10 +52,10 @@ function AddStudentForm({ onAdd }) {
           />
         </div>
 
-        {/* Score field */}
+       
         <div className="form-field form-field--score">
           <label htmlFor="student-score" className="form-label">
-            Score (0 – 100)
+            Score (0 -100)
           </label>
           <input
             id="student-score"
@@ -73,7 +70,7 @@ function AddStudentForm({ onAdd }) {
           />
         </div>
 
-        {/* Submit button */}
+       
         <button
           className="btn-add"
           onClick={handleSubmit}
@@ -83,7 +80,7 @@ function AddStudentForm({ onAdd }) {
         </button>
       </div>
 
-      {/* Inline validation error */}
+      
       {error && <p className="form-error">{error}</p>}
     </div>
   )

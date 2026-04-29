@@ -45,7 +45,7 @@
   border-bottom: none;
 }
 
-/* Responsive: hide rank column on small screens */
+
 @media (max-width: 520px) {
   .student-table th:first-child,
   .student-table td:first-child {

@@ -2,7 +2,6 @@ import { useState } from 'react'
 import './StudentRow.css'
 
 function StudentRow({ student, index, onScoreChange }) {
-  /* Local draft state for the input so typing doesn't immediately commit */
   const [draft, setDraft] = useState(String(student.score))
 
   const isPass = student.score >= 40
@@ -12,7 +11,6 @@ function StudentRow({ student, index, onScoreChange }) {
     if (!isNaN(val) && val >= 0 && val <= 100) {
       onScoreChange(student.id, val)
     } else {
-      /* Reset draft to current score if input was invalid */
       setDraft(String(student.score))
     }
   }
@@ -24,15 +22,10 @@ function StudentRow({ student, index, onScoreChange }) {
 
   return (
     <tr className="student-row">
-      {/* Rank */}
       <td>
         <span className="rank-badge">{index + 1}</span>
       </td>
-
-      {/* Name */}
       <td className="name-cell">{student.name}</td>
-
-      {/* Score editor */}
       <td>
         <div className="score-cell">
           <input
@@ -54,13 +47,9 @@ function StudentRow({ student, index, onScoreChange }) {
           </button>
         </div>
       </td>
-
-      {/* Current score */}
       <td className={`score-display ${isPass ? 'score-pass' : 'score-fail'}`}>
         {student.score}
       </td>
-
-      {/* Pass / Fail status */}
       <td>
         <span className={`status-badge ${isPass ? 'badge-pass' : 'badge-fail'}`}>
           {isPass ? 'Pass' : 'Fail'}
