@@ -1,0 +1,54 @@
+.table-wrap {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+
+.empty-state {
+  padding: 2rem;
+  text-align: center;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.student-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.student-table thead tr {
+  background: #f8fafc;
+}
+
+.student-table th {
+  padding: 11px 14px;
+  text-align: left;
+  font-weight: 500;
+  font-size: 12px;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.student-table td {
+  padding: 11px 14px;
+  border-bottom: 1px solid #f1f5f9;
+  color: #1e293b;
+  vertical-align: middle;
+}
+
+.student-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Responsive: hide rank column on small screens */
+@media (max-width: 520px) {
+  .student-table th:first-child,
+  .student-table td:first-child {
+    display: none;
+  }
+}
